@@ -5,7 +5,6 @@ import { Radio, RadioGroup } from '@headlessui/react'
 import { useSearchParams } from "next/navigation";
 import { Cohere, CohereClient } from 'cohere-ai';
 import DescriptionAndDetails from './description&details';
-import BlurFade from '../magicui/BlurFade';
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '@/img/yvonnes-art-website-favicon-color.png'
@@ -16,7 +15,6 @@ const navigation = [
     { name: 'About', href: '/about' },
     { name: 'Profile', href: '#' },
   ]
-
 const product = {
   name: 'Basic Tee 6-Pack',
   price: '$192',
