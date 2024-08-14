@@ -4,7 +4,7 @@ import { StarIcon } from '@heroicons/react/20/solid'
 import { Radio, RadioGroup } from '@headlessui/react'
 import { useSearchParams } from "next/navigation";
 import { Cohere, CohereClient } from 'cohere-ai';
-import Header from '@/components/header'
+import Header from '../header';
 import DescriptionAndDetails from './description&details';
 import BlurFade from '../magicui/BlurFade';
 
@@ -42,7 +42,7 @@ export default function ProductOverview() {
 
   return (
     <div className="bg-white">
-    <Header />
+    <Header/>
       <div className="pt-24">
         <nav aria-label="Breadcrumb">
           <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
