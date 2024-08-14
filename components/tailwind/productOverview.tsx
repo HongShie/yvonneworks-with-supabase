@@ -45,6 +45,12 @@ function classNames(...classes: string[]) {
 
 export default function productOverview() {
   const searchParams = useSearchParams();
+  const artName = <Suspense>searchParams.get("artName")</Suspense>;
+  const artPrice = <Suspense>searchParams.get("price")</Suspense>;
+  const artLink = <Suspense>searchParams.get("artlink")</Suspense>;
+  const artpv1 = <Suspense>searchParams.get("artpv1")</Suspense>;
+  const artpv2 = <Suspense>searchParams.get("artpv2")</Suspense>;
+  const artpv3 = <Suspense>searchParams.get("artpv3")</Suspense>;
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -131,9 +137,7 @@ export default function productOverview() {
             ))}
             <li className="text-sm">
               <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                <Suspense>
-                {searchParams.get('name')}
-                </Suspense>
+                {artName}
               </a>
             </li>
           </ol>
@@ -144,7 +148,7 @@ export default function productOverview() {
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
             <img
               alt=""
-              src={searchParams.get('artpv3')?.toString()}
+              src={artpv3?.toString()}
               className="h-full w-full object-cover object-center"
             />
           </div>
@@ -152,14 +156,14 @@ export default function productOverview() {
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
               <img
                 alt=""
-                src={searchParams.get('artpv1')?.toString()}
+                src={artpv1?.toString()}
                 className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
               <img
                 alt=""
-                src={searchParams.get('artpv2')?.toString()}
+                src={artpv2?.toString()}
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -167,7 +171,7 @@ export default function productOverview() {
           <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
               alt=""
-              src={searchParams.get('artlink')?.toString()}
+              src={artLink?.toString()}
               className="h-full w-full object-cover object-center"
             />
           </div>
@@ -177,9 +181,7 @@ export default function productOverview() {
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              <Suspense>
-              {searchParams.get('name')}
-              </Suspense>
+              {artName}
               </h1>
           </div>
 
@@ -187,9 +189,7 @@ export default function productOverview() {
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
             <p className="text-3xl tracking-tight text-gray-900">
-              <Suspense>
-              {searchParams.get('price')}
-              </Suspense>
+              {artPrice}
             </p>
 
             {/* Reviews */}
@@ -229,7 +229,7 @@ export default function productOverview() {
             </form>
           </div>
 
-          <DescriptionAndDetails artName={searchParams.get('name')}></DescriptionAndDetails>
+          <DescriptionAndDetails artName={artName}></DescriptionAndDetails>
         </div>
       </div>
     </div>
