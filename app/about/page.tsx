@@ -19,6 +19,7 @@ const navigation = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  let googlemap: string = "https://goo.gl/maps/5YX1yYJpHrX1k3yZ6";
 
   return (
     <div className="bg-neutral-100">
@@ -116,7 +117,12 @@ export default function Home() {
               </div>
               <div className='col-span-7'>
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.2259521122884!2d101.44207866956073!3d3.0868936998055547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc53aeb6f499a7%3A0x49d810ba90157fa7!2zQXJ0cm9wb2xpcyDnlavlrrY!5e1!3m2!1sen!2smy!4v1709086019220!5m2!1sen!2smy" width="100%" height="100%" className="rounded-2xl" title="map" allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.2259521122884!2d101.44207866956073!3d3.0868936998055547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc53aeb6f499a7%3A0x49d810ba90157fa7!2zQXJ0cm9wb2xpcyDnlavlrrY!5e1!3m2!1sen!2smy!4v1709086019220!5m2!1sen!2smy"
+                  width="100%" 
+                  height="100%" 
+                  className="rounded-2xl" 
+                  title="map" 
+                  loading="lazy">
                 </iframe>
               </div>
             </div>
