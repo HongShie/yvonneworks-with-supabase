@@ -16,15 +16,15 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
   })();
     const fetchDescription = newDescription;
 
-  const newHighlight = (async () => {
-    const response = await cohere.chat({
-      message: "Write 2 highlights about the artpiece called " + artName + " as well as 2 highlights about the material of the artpiece . Each highlight must be less than 10 words. Replace the numbering system with comma. Don't mention anything with the artpiece's name"
-    });
+  // const newHighlight = (async () => {
+  //   const response = await cohere.chat({
+  //     message: "Write 2 highlights about the artpiece called " + artName + " as well as 2 highlights about the material of the artpiece . Each highlight must be less than 10 words. Discard the numbering system. Don't mention anything with the artpiece's name"
+  //   });
 
-    console.log(response.text);
-    return (response.text);
-  })();
-      const fetchHighlight = newHighlight;
+  //   console.log(response.text);
+  //   return (response.text);
+  // })();
+  //     const fetchHighlight = newHighlight;
 
   const newDetail = (async () => {
     const response = await cohere.chat({
@@ -35,6 +35,8 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
     return (response.text);
   })();
       const fetchDetail = newDetail;
+
+      
     return (
         <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
             {/* Description and details */}
@@ -50,7 +52,7 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
               <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
 
               <div className="mt-4">
-              <p className="text-sm text-gray-600">{fetchHighlight}</p>
+              <p className="text-sm text-gray-600">asd</p>
               </div>
             </div>
 

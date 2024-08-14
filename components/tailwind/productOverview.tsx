@@ -43,14 +43,11 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function productOverview() {
-  const searchParams = useSearchParams();
-  const artName = <Suspense>searchParams.get("artName")</Suspense>;
-  const artPrice = <Suspense>searchParams.get("price")</Suspense>;
-  const artLink = <Suspense>searchParams.get("artlink")</Suspense>;
-  const artpv1 = <Suspense>searchParams.get("artpv1")</Suspense>;
-  const artpv2 = <Suspense>searchParams.get("artpv2")</Suspense>;
-  const artpv3 = <Suspense>searchParams.get("artpv3")</Suspense>;
+
+export default function productOverview(
+  {artName, artPrice, artLink, artpv1, artpv2, artpv3}:
+  {artName: React.ReactNode; artPrice: React.ReactNode; artLink: React.ReactNode; artpv1: React.ReactNode; artpv2: React.ReactNode; artpv3: React.ReactNode} 
+) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
