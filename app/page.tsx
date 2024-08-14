@@ -1,54 +1,71 @@
-import DeployButton from "../components/DeployButton";
-import AuthButton from "../components/AuthButton";
-import { createClient } from "@/utils/supabase/server";
-import ConnectSupabaseSteps from "@/components/tutorial/ConnectSupabaseSteps";
-import SignUpUserSteps from "@/components/tutorial/SignUpUserSteps";
-import Header from "@/components/Header";
+// "use client";
+// import React from "react";
+// import { motion } from "framer-motion";
+// import { LampContainer } from "@/components/ui/lamp";
+// import Link from "next/link";
+ 
+// export default function LampDemo() {
+//   return (
+//     <LampContainer>
+//       <motion.h1
+//         initial={{ opacity: 0.5, y: 100 }}
+//         whileInView={{ opacity: 1, y: 0 }}
+//         transition={{
+//           delay: 0.3,
+//           duration: 0.8,
+//           ease: "easeInOut",
+//         }}
+//         className="mt-8 bg-gradient-to-br from-pink-200 to-pink-400 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+//       >
+//        <Link href={"/art"}>YvonneWorks</Link>
+//       </motion.h1>
+//     </LampContainer>
+//   );
+// }
 
-export default async function Index() {
-  const canInitSupabaseClient = () => {
-    // This function is just for the interactive tutorial.
-    // Feel free to remove it once you have Supabase connected.
-    try {
-      createClient();
-      return true;
-    } catch (e) {
-      return false;
-    }
-  };
+"use client";
+import { motion } from "framer-motion";
+import React from "react";
+import { ImagesSlider } from "@/components/ui/image-slider";
+import imgFeature1 from "@/img/art/Fuji_Dawn.jpg";
+import imgFeature2 from "@/img/art/Summer_Breeze.jpg";
+import imgFeature3 from "@/img/art/Wet_Bloom.jpg";
+import imgFeature4 from "@/img/art/Withered_heart.jpg";
+import Link from "next/link";
 
-  const isSupabaseConnected = canInitSupabaseClient();
-
+export default function ImagesSliderDemo() {
+  const images = [
+    "https://xrlplewixmqroqijycns.supabase.co/storage/v1/object/public/img/art/Fuji_Dawn.jpg",
+    "https://xrlplewixmqroqijycns.supabase.co/storage/v1/object/public/img/art/Summer_Breeze.jpg",
+    "https://xrlplewixmqroqijycns.supabase.co/storage/v1/object/public/img/art/Wet_Bloom.jpg",
+    "https://xrlplewixmqroqijycns.supabase.co/storage/v1/object/public/img/art/Withered_heart.jpg"
+  ];
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
-        <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-          <DeployButton />
-          {isSupabaseConnected && <AuthButton />}
-        </div>
-      </nav>
-
-      <div className="flex-1 flex flex-col gap-20 max-w-4xl px-3">
-        <Header />
-        <main className="flex-1 flex flex-col gap-6">
-          <h2 className="font-bold text-4xl mb-4">Next steps</h2>
-          {isSupabaseConnected ? <SignUpUserSteps /> : <ConnectSupabaseSteps />}
-        </main>
-      </div>
-
-      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Powered by{" "}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Supabase
-          </a>
-        </p>
-      </footer>
-    </div>
+    <ImagesSlider className="h-[100vh]" images={images}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className="z-50 flex flex-col justify-center items-center"
+      >
+        <motion.p className="font-bold text-4xl lg:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          YvonneWorks <br />
+        </motion.p>
+        <Link href={"/art"}>
+          <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+            <span>Explore Artist Masterpieces →</span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+          </button>
+        </Link>
+      </motion.div>
+    </ImagesSlider>
   );
 }
