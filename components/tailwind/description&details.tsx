@@ -1,4 +1,5 @@
 import { Cohere, CohereClient } from 'cohere-ai';
+import TypingAnimation from '../magicui/TypingAnimation';
 
 const cohere = new CohereClient({
     token: 'kEXIZWrAGxmykrgCjZQaL6ZybRjoUSInQamDRZVO',
