@@ -48,7 +48,7 @@ export default function Example() {
                         />
                       </div>
                       </BlurFade>
-                      <BlurFade delay={0.2}>
+                      <BlurFade delay={0.1}>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
@@ -59,7 +59,7 @@ export default function Example() {
                       </BlurFade>
                     </div>
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <BlurFade delay={0.4}>
+                      <BlurFade delay={0.2}>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
@@ -68,7 +68,7 @@ export default function Example() {
                         />
                       </div>
                       </BlurFade>
-                      <BlurFade delay={0.6}>
+                      <BlurFade delay={0.3}>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
@@ -77,7 +77,7 @@ export default function Example() {
                         />
                       </div>
                       </BlurFade>
-                      <BlurFade delay={0.8}>
+                      <BlurFade delay={0.4}>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
@@ -88,7 +88,7 @@ export default function Example() {
                       </BlurFade>
                     </div>
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <BlurFade delay={1}>
+                      <BlurFade delay={0.5}>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
@@ -97,7 +97,7 @@ export default function Example() {
                         />
                       </div>
                       </BlurFade> 
-                      <BlurFade delay={1.2}>
+                      <BlurFade delay={0.6}>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
