@@ -22,9 +22,11 @@ export default function Example() {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               YvonneWorks
             </h1>
-            <p className="mt-4 text-xl text-gray-500">
-              This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
-              if you live or die.
+            <p className="mt-4 text-lg text-gray-500">
+            Welcome to YvonneWorks, where creativity meets curation. 
+            Explore a vibrant space dedicated to showcasing the best in contemporary art. 
+            Discover unique works and inspiring exhibitions that transcend the ordinary. 
+            Your journey into the extraordinary starts here.
             </p>
           </div>
           <div>
