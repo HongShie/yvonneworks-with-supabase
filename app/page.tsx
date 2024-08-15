@@ -15,7 +15,7 @@ const images = [
 ];
 export default function Example() {
   return (
-    <div className="relative overflow-hidden h-screen bg-white">
+    <div className="relative overflow-hidden h-screen bg-neutral-100">
       <div className="pb-80 pt-16 sm:pb-40 h-screen sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
