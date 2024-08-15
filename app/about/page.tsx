@@ -27,9 +27,9 @@ export default function Home() {
       <Header></Header>
       <div className="relative isolate px-6 pt-24 pb-24 lg:px-20">
         <div className='bg-neutral-100'>
-          <BlurFade delay={0.25}>
           <div className="grid grid-cols-12 gap-8 mb-8">
-            <div className='col-span-4 bg-white p-6 rounded-3xl h-96 shadow-lg'>
+          <BlurFade className='col-span-4 h-96'>
+            <div className=' bg-white p-6 rounded-3xl h-full shadow-lg'>
               <div className='h-1/2'>
               <Image
               src={profilePic}
@@ -45,18 +45,20 @@ export default function Home() {
                 <span className="mt-4 inline-flex items-center rounded-full bg-red-100 px-2 py-1 text-sm font-medium text-red-700 ring-1 ring-inset ring-red-100">Based in Malaysia</span>
               </div>
             </div>
-            <div className='col-span-8 bg-rose-300 p-6 rounded-3xl h-96 shadow-lg'>
+            </BlurFade>
+            <BlurFade className='col-span-8 h-96' delay={0.1}>
+            <div className='bg-rose-300 p-6 rounded-3xl h-full shadow-lg'>
               <p className='text-4xl font-semibold text-white leading-snug tracking-wide'>
                 As a product designer, I specialize in creating magical visual identities for digital products. 
                 I believe that a stunning design starts with common values, open communication, and respect for your audience.
               </p>
             </div>
+            </BlurFade>
           </div>
-          </BlurFade>
 
-          <BlurFade delay={0.50}>
           <div className="grid grid-cols-12 gap-8">
-            <div className='col-span-8 grid grid-cols-12 bg-violet-300 text-white p-6 rounded-3xl h-96 shadow-lg'>
+            <BlurFade className='col-span-8 h-96' delay={0.2}>
+            <div className='grid grid-cols-12 bg-violet-300 text-white p-6 rounded-3xl h-full shadow-lg'>
               <div className='col-span-5 grid justify-start place-items-center'>
                 <p className='text-4xl font-semibold leading-snug whitespace-break-space'>Want to be a<br/>an ARTIST? <br/><br/> I'll teach <br/>🤩</p>
               </div>
@@ -71,7 +73,9 @@ export default function Home() {
                 </iframe>
               </div>
             </div>
-            <div className='col-span-4 bg-white p-6 rounded-3xl h-96 shadow-lg'>
+            </BlurFade>
+            <BlurFade className='col-span-4 h-96' delay={0.3}>
+            <div className='bg-white p-6 rounded-3xl h-full shadow-lg'>
               <div className='h-1/3 text-5xl flex justify-center items-center'>
                 <span>✌🏻</span><span>💡</span><span>✨</span>
               </div>
@@ -87,9 +91,8 @@ export default function Home() {
                 <span className="mt-4 inline-flex items-center rounded-full bg-red-100 px-2 py-1 text-sm font-medium text-red-700 ring-1 ring-inset ring-red-100">Pinterest</span>
               </div>
             </div>
-          </div>
-          </BlurFade>
-          
+            </BlurFade>
+          </div>          
         </div>
       </div>
     </div>
