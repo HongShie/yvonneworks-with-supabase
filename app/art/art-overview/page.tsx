@@ -20,7 +20,6 @@ export default async function Example() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <ProductOverview {...Search()}></ProductOverview>
       {/* <ProductOverview artName={artName} artPrice={artPrice} artLink={artLink} artpv1={artpv1} artpv2={artpv2} artpv3={artpv3}></ProductOverview> */}
     </Suspense>
   )
