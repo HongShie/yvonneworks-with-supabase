@@ -8,7 +8,8 @@ async function artworks() {
   const supabase = createClient();
     const { data: artworks, error } = await supabase
     .from("artworks")
-    .select("id, name, category, year, dimensions, price, artlink, artpv1, artpv2, artpv3");
+    .select("id, name, category, year, dimensions, price, artlink, artpv1, artpv2, artpv3")
+    .order("id", { ascending: true });;
 
     console.log(artworks)
 
