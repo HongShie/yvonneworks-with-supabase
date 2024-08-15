@@ -11,16 +11,15 @@ function Search(){
   const artpv1 = searchParams.get("artpv1") ?? "";
   const artpv2 = searchParams.get("artpv2") ?? "";
   const artpv3 = searchParams.get("artpv3") ?? "";
-  return {artName, artPrice, artLink, artpv1, artpv2, artpv3};
+  return (<ProductOverview artName={artName} artPrice={artPrice} artLink={artLink} artpv1={artpv1} artpv2={artpv2} artpv3={artpv3}></ProductOverview>
+  );
 }
 
 
 export default async function Example() {
-  const {artName, artPrice, artLink, artpv1, artpv2, artpv3} = Search();
-
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <ProductOverview artName={artName} artPrice={artPrice} artLink={artLink} artpv1={artpv1} artpv2={artpv2} artpv3={artpv3}></ProductOverview>
+      <Search/>
     </Suspense>
   )
 }
