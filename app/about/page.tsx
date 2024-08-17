@@ -15,7 +15,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Art', href: '/art' },
   { name: 'About', href: '/about' },
-  { name: 'Profile', href: '#' },
+  // { name: 'Profile', href: '#' },
 ]
 
 export default function Home() {
