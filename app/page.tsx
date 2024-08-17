@@ -1,4 +1,5 @@
 "use client";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
@@ -120,6 +121,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      <SpeedInsights/>
     </div>
   )
 }

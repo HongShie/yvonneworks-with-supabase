@@ -1,5 +1,6 @@
 'use client';
 import ProductOverview from '@/components/tailwind/productOverview';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 
@@ -20,6 +21,7 @@ export default async function Example() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Search/>
+      <SpeedInsights/>
     </Suspense>
   )
 }

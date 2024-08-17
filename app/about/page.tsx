@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import profilePic from '@/img/IMG_0837.jpg'
 import logo from '@/img/yvonnes-art-website-favicon-color.png'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import BlurFade from '@/components/magicui/BlurFade'
 import Header from '@/components/header'
 
@@ -93,6 +94,7 @@ export default function Home() {
           </div>          
         </div>
       </div>
+      <SpeedInsights/>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Header from '../../components/header';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { createClient } from '@/utils/supabase/server';
 import BlurFade from '@/components/magicui/BlurFade';
 
@@ -42,6 +42,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <SpeedInsights/>
     </div>
   )
 }
