@@ -10,6 +10,7 @@
     "@heroicons/react": "^2.1.5",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
+    "@vercel/speed-insights": "^1.0.12",
     "autoprefixer": "10.4.17",
     "clsx": "^2.1.1",
     "cohere-ai": "^7.12.0",
