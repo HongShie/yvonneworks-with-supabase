@@ -225,7 +225,7 @@ export default function productOverview(
             </form>
           </div>
 
-          <DescriptionAndDetails artName={artName}></DescriptionAndDetails>
+          {/* <DescriptionAndDetails artName={artName}></DescriptionAndDetails> */}
         </div>
       </div>
     </div>
