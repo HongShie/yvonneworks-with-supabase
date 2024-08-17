@@ -52,7 +52,6 @@ export default function productOverview(
 
 
   return (
-    console.log(artName, artPrice, artLink, artpv1, artpv2, artpv3),
     <div className="bg-white">
     <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
