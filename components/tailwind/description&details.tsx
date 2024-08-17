@@ -5,7 +5,6 @@ const cohere = new CohereClient({
   });
 
 export default function DescriptionAndDetails({artName}:{artName: React.ReactNode}) {
-  console.log(artName)
   const newDescription = (async () => {
     const response = await cohere.chat({
       message: artName + " is the name of the artpiece. Write a single paragraph about this original artpeice with an artistic perspective and must be less than 45 words"
@@ -14,16 +13,6 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
     console.log("Response : " + response.text);
     return (response.text);
   })();
-
-  // const newHighlight = (async () => {
-  //   const response = await cohere.chat({
-  //     message: "Write 2 highlights about the artpiece called " + artName + " as well as 2 highlights about the material of the artpiece . Each highlight must be less than 10 words. Discard the numbering system. Don't mention anything with the artpiece's name"
-  //   });
-
-  //   console.log(response.text);
-  //   return (response.text);
-  // })();
-  //     const fetchHighlight = newHighlight;
 
   const newDetail = (async () => {
     const response = await cohere.chat({
@@ -45,14 +34,6 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
                 <p className="text-base text-gray-900">{newDescription}</p>
               </div>
             </div>
-
-            {/* <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
-
-              <div className="mt-4">
-              <p className="text-sm text-gray-600">{newHighlight}</p>
-              </div>
-            </div> */}
 
             <div className="mt-10">
               <h2 className="text-sm font-medium text-gray-900">Details</h2>
