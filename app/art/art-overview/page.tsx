@@ -1,3 +1,4 @@
+'use client';
 import ProductOverview from '@/components/tailwind/productOverview';
 import { useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
