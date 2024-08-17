@@ -1,7 +1,7 @@
 import { Cohere, CohereClient } from 'cohere-ai';
 
 const cohere = new CohereClient({
-    token: 'NKeoYY6VFbyQy2MjAmZCNACkhJk4N7BUu0ZMnemf',
+    token: 'kEXIZWrAGxmykrgCjZQaL6ZybRjoUSInQamDRZVO',
   });
 
 export default function DescriptionAndDetails({artName}:{artName: React.ReactNode}) {
