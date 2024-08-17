@@ -12,10 +12,9 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
       message: artName + " is the name of the artpiece. Write a single paragraph about this original artpeice with an artistic perspective and must be less than 45 words"
     });
 
-    console.log(response.text);
+    console.log("Response : " + response.text);
     return (response.text);
   })();
-    const fetchDescription = newDescription;
 
   const newHighlight = (async () => {
     const response = await cohere.chat({
@@ -35,7 +34,6 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
     console.log(response.text);
     return (response.text);
   })();
-      const fetchDetail = newDetail;
 
       
     return (
@@ -45,7 +43,7 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
               <h3 className="sr-only">Description</h3>
 
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{fetchDescription}</p>
+                <p className="text-base text-gray-900">{newDescription}</p>
               </div>
             </div>
 
@@ -53,7 +51,7 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
               <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
 
               <div className="mt-4">
-              <p className="text-sm text-gray-600">{fetchHighlight}</p>
+              <p className="text-sm text-gray-600">{newHighlight}</p>
               </div>
             </div>
 
@@ -61,7 +59,7 @@ export default function DescriptionAndDetails({artName}:{artName: React.ReactNod
               <h2 className="text-sm font-medium text-gray-900">Details</h2>
 
               <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600">{fetchDetail}</p>
+                <p className="text-sm text-gray-600">{newDetail}</p>
               </div>
             </div>
           </div>
