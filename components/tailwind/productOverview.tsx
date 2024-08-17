@@ -48,11 +48,11 @@ export default function productOverview(
   {artName, artPrice, artLink, artpv1, artpv2, artpv3}:
   {artName: React.ReactNode; artPrice: React.ReactNode; artLink: React.ReactNode; artpv1: React.ReactNode; artpv2: React.ReactNode; artpv3: React.ReactNode} 
 ) {
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 
   return (
+    console.log(artName, artPrice, artLink, artpv1, artpv2, artpv3),
     <div className="bg-white">
     <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">

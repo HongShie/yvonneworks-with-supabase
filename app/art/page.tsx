@@ -10,9 +10,6 @@ async function artworks() {
     .from("artworks")
     .select("id, name, category, year, dimensions, price, artlink, artpv1, artpv2, artpv3")
     .order("id", { ascending: true });;
-
-    console.log(artworks)
-
     return artworks;
 }
 
@@ -36,19 +33,6 @@ export default async function Home() {
                       {artwork.name}
                     </li>
                   </a>
-                  {/* <Link href={{
-                    pathname: '/art/art-overview', 
-                    query: {
-                      name: artwork.name,
-                      price: artwork.price,
-                      year: artwork.year,
-                      dimensions: artwork.dimensions,
-                      artlink: artwork.artlink,
-                      artpv1: artwork.artpv1,
-                      artpv2: artwork.artpv2,
-                      artpv3: artwork.artpv3
-                    }
-                    }}><li className='text-3xl pb-4 font-bold w-auto' key={artwork.name}>{artwork.name}</li></Link> */}
                   <img className='object-cover object-center h-32 w-full rounded-2xl lg:h-64' src={artwork.artlink} alt='Image'/>
                   </div>
                 </BlurFade>
