@@ -1,14 +1,10 @@
 import { Cohere, CohereClient } from 'cohere-ai';
-import { useState } from 'react';
 
 const cohere = new CohereClient({
     token: 'kEXIZWrAGxmykrgCjZQaL6ZybRjoUSInQamDRZVO',
   });
 
 export default function DescriptionAndDetails({artName}:{artName: React.ReactNode}) {
-  const [flag, setFlag] = useState(true);
-  const [count, setCount] = useState(0);
-
   console.log(artName)
   const newDescription = (async () => {
     const response = await cohere.chat({
