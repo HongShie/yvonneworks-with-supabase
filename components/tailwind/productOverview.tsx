@@ -224,7 +224,6 @@ export default function productOverview(
               </button>
             </form>
           </div>
-
           <DescriptionAndDetails artName={artName}></DescriptionAndDetails>
         </div>
       </div>
