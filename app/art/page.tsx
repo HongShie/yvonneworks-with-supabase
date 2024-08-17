@@ -26,7 +26,7 @@ export default async function Home() {
       <div className="relative isolate px-6 pt-24 pb-24 lg:px-20">
         <div className='bg-neutral-100'>
           <div className="">
-            <ul className='grid grid-cols-2 gap-4 lg:grid-cols-3'>
+            <ul className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
               {jsonData?.map((artwork, idx) => (
                 <BlurFade delay={0.25 + idx * 0.05} inView>
                   <div className="bg-white rounded-3xl px-4 py-4 shadow-lg lg:px-6 lg:py-6">
