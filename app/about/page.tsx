@@ -48,8 +48,8 @@ export default function Home() {
             <BlurFade className='col-span-8 h-96' delay={0.1}>
             <div className='bg-rose-300 p-6 rounded-3xl h-full shadow-lg'>
               <p className='text-4xl font-semibold text-white leading-snug tracking-wide'>
-                As a product designer, I specialize in creating magical visual identities for digital products. 
-                I believe that a stunning design starts with common values, open communication, and respect for your audience.
+              My goal is to transform your vision into a masterpiece that not only meets your expectations but resonates with your soul, 
+              leaving you with something truly unforgettable.
               </p>
             </div>
             </BlurFade>
