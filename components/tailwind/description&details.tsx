@@ -7,26 +7,22 @@ const cohere = new CohereClient({
 export default function DescriptionAndDetails({artName}:{artName: React.ReactNode}) {
   const newDescription = (async () => {
     const response = await cohere.chat({
-      message: artName + " is the name of the artpiece. Write a single paragraph about this original artpeice with an artistic perspective and must be less than 45 words"
+      message: artName + " is the name of the artpiece. Write a single paragraph about this original artpeice with an artistic perspective and must be less than 45 words",
+      temperature: 0.1,
+      maxInputTokens: 100,
+      maxTokens: 100
     });
 
     console.log("Response : " + response.text);
     return (response.text);
   })();
 
-  // const newHighlight = (async () => {
-  //   const response = await cohere.chat({
-  //     message: "Write 2 highlights about the artpiece called " + artName + " as well as 2 highlights about the material of the artpiece . Each highlight must be less than 10 words. Discard the numbering system. Don't mention anything with the artpiece's name"
-  //   });
-
-  //   console.log(response.text);
-  //   return (response.text);
-  // })();
-  //     const fetchHighlight = newHighlight;
-
   const newDetail = (async () => {
     const response = await cohere.chat({
-      message: "Write about how " + artName + ", the artpiece has been precisely and carefully detailed and describe what artistic material has been used and must less than 50 words."
+      message: "Write about how " + artName + ", the artpiece has been precisely and carefully detailed and describe what artistic material has been used and must less than 50 words.",
+      temperature: 0.1,
+      maxInputTokens: 100,
+      maxTokens: 100
     });
 
     console.log(response.text);
