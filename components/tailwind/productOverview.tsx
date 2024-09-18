@@ -13,7 +13,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Art', href: '/art' },
     { name: 'About', href: '/about' },
-    // { name: 'Profile', href: '#' },
+    { name: 'Commission', href: '/commission' },
   ]
 const product = {
   name: 'Basic Tee 6-Pack',
